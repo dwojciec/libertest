@@ -1,3 +1,4 @@
 #!/bin/bash
-su -c "ltpconfigure.sh" -s /bin/bash tester
-su -c "ltp start" -s /bin/bash tester
+sudo su - postgres -c "pgsvr -s pgdefault -y start"
+sudo -su - tester  -c "ltpconfigure.sh" 
+sudo -su - tester  -c "ltp start"
