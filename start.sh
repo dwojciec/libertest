@@ -1,4 +1,3 @@
 #!/bin/bash
-source /home/tester/.bash_profile
-ltpconfigure.sh
-ltp start
+su -c "ltpconfigure.sh" -s /bin/bash tester
+su -c "ltp start" -s /bin/bash tester
