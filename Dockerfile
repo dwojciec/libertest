@@ -1,4 +1,6 @@
 FROM docker.io/chetanpatil17/liberpoc:new-without-root 
 EXPOSE 5432
-ADD start.sh /tmp/start.sh
-CMD ["/tmp/start.sh"]
+COPY docker-entrypoint.sh /entrypoint.sh
+COPY wait /usr/local/bin
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/usr/local/bin/wait"]

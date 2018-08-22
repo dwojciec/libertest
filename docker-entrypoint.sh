@@ -40,6 +40,3 @@ eval sudo setsid /usr/bin/redis-server ${redis_config-} &
 [[ -f /etc/redis.conf ]] && redis_config=/etc/liber/ltp-redis-gdg.conf
 eval sudo setsid /usr/bin/redis-server ${redis_config-} &
 echo
-#sudo su - postgres -c "pgsvr -s pgdefault -y start"
-sudo su - tester  -c "ltpconfigure.sh" 
-sudo su - tester  -c "ltp start"

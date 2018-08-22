@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+echo "run ltpconfigure.sh"
+sudo su - tester  -c "ltpconfigure.sh"
+echo "run ltp start"
+sudo su - tester  -c "ltp start"
+
+# Wait for SIGTERM
+wait
+
